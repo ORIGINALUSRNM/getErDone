@@ -1,0 +1,44 @@
+/*
+
+dark: #333300;
+medium dark: 333300;
+mediume: 339900;
+00CC00
+light green: ;#33FF00
+*/
+.navbar {
+	background-color: #333300;
+}
+
+header .navbar .navbar-brand {
+	color: #33FF00;
+}
+
+.jsh-todo-list {
+	max-width: 600px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #33FF00;
+    color: #333300;
+}
+
+.btn-primary[disabled],
+.btn-primary[disabled]:hover {
+	background: #33FF00;
+    color: #333300;
+    opacity:.5;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #00CC00;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #339900;
+    box-shadow: none;
+}

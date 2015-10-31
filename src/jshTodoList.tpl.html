@@ -1,0 +1,15 @@
+<div class="jsh-todo-list">
+	<form ng-submit="vm.addTodo()">
+		<div class="input-group">
+			<input class="form-control" placeholder="Add todo" ng-model="vm.todo" type="text" />
+			<span class="input-group-btn">
+				<button class="btn btn-primary" ng-click="vm.addTodo()" ng-disabled="vm.todo.length === 0">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				</button>
+			</span>
+		</div>
+	</form>
+	<p ng-repeat="todo in vm.todos track by todo.id">
+		{{todo.text}}<button ng-click="vm.removeTodo($index)">remove</button>
+	</p>
+</div>

@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="getErDone">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+		<link href="main.css" rel="stylesheet" />
+		<link href="animate.css" rel="stylesheet" />
 		<script src="/node_modules/angular/angular.js"></script>
 	</head>
 	<body>
-		<h1>Jason Hornbuckle's TODO! ( Get er' done! )</h1>
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="navbar-header">
+						      <a class="navbar-brand animated rubberBand" sref="todoList">Get Er' Done</a>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div>{{ data.todos.length }}</div>
+		<section class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div ui-view></div>
+				</div>
+			</div>
+		</section>
+		<script src="/node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+		<script src="app.js"></script>
+		<script src="routes.js"></script>
+		<script src="todosService.js"></script>
+		<script src="jshTodoList.js"></script>
 	</body>
 </html>
