@@ -9,7 +9,13 @@
 			</span>
 		</div>
 	</form>
-	<p ng-repeat="todo in vm.todos track by todo.id">
-		{{todo.text}}<button ng-click="vm.removeTodo($index)">remove</button>
-	</p>
+	<div>Completed: {{vm.data.completed }}</div>
+	<ul class="list-group">
+		<li class="list-group-item todoItem" ng-repeat="todo in vm.data.todos track by todo.id">
+			<p>
+				<input type="checkbox" ng-model="todo.completed" ng-change="vm.toggleComplete($index)" />
+					{{todo.text}}<button ng-click="vm.removeTodo($index)">remove</button>
+			</p>
+		</li>
+	</ul>
 </div>

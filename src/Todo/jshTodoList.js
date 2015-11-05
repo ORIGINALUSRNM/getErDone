@@ -9,10 +9,13 @@
 					var vm = this;
 
 					vm.todo = '';
+					vm.data = {};
 					vm.addTodo = addTodo;
+					vm.completed = completed;
 					vm.removeTodo = removeTodo;
+					vm.toggleComplete = toggleComplete;
 					
-					todosService.getAll().then(todoGetAllSuccess, todoGetError);
+					todosService.getTodoData().then(todoGetAllSuccess, todoGetError);
 
 					function addTodo() {
 						if(vm.todo.length === 0){ 
@@ -29,17 +32,26 @@
 						
 					}
 
+					function completed() {
+						return todosService.getCompleted();
+					}
+
 					function removeTodo(index) {
 						todosService.removeTodo(index);
 					}
 
 					function todoGetAllSuccess(data) {
-						vm.todos = data;
+						vm.data = data;
 					}
 
 					function todoGetError(error) {
 
 					}
+
+					function toggleComplete(index) {
+						todosService.toggleComplete(index);
+					}
+
 				},
 				link: function () {
 					

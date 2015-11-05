@@ -5,6 +5,7 @@ medium dark: 333300;
 mediume: 339900;
 00CC00
 light green: ;#33FF00
+00FF99
 */
 .navbar {
 	background-color: #333300;
@@ -42,3 +43,30 @@ header .navbar .navbar-brand {
     background: #339900;
     box-shadow: none;
 }
+
+/* animations */
+.todoItem {
+    background-color:#eee;
+    border: 1px solid #333300;
+}
+
+.todoItem.ng-enter,
+.todoItem.ng-leave {
+    transition: all linear 0.5s;
+}
+
+.todoItem.ng-enter,
+.todoItem.ng-leave.ng-leave-active {
+    background-color:#fff;
+    opacity:0;
+}
+
+.todoItem.ng-enter.ng-enter-active,
+.todoItem.ng-leave {
+    background-color:#eee;
+    opacity:1;
+}
+
+
+
+
