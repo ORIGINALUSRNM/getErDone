@@ -3,7 +3,7 @@
 		.directive('jshTodoList', function () {
 			return {
 				restrict: 'EA',
-				templateUrl: 'jshTodoList.tpl.html',
+				templateUrl: 'Todo/jshTodoList.tpl.html',
 				controllerAs: 'vm',
 				controller: function (todosService) {
 					var vm = this;

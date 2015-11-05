@@ -15,5 +15,5 @@
 //replace with real hhttp and use httpBackend
 //new todos should be added to the top of the list. 
 //add drag and drop with ability to change real order.
-
+//optimze digest when typing new todo
 //set up testing and write one test.
